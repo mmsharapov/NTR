@@ -1,0 +1,141 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repository</title>
+    <script src="functions.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="prism.css" rel="stylesheet" />
+    <script src="prism.js"></script>
+</head>
+<style>
+	.main_div{
+		width: 90%;
+		border: 1px solid #EEE;
+		border-radius: 5px;
+		margin: 1% auto;
+		padding: 10px; 
+		text-align: center;
+	}
+</style>
+
+<BODY>
+
+<a href="index.html#s" class="back-to-home-link">
+    ← Return to main page
+</a>
+
+<div class="main_div">
+<h1>Repository</h1>
+
+<p>The idea of this project was first briefly outlined in these conference proceedings . . . PDMU . . . 
+and later a somewhat expanded version was published on . . . ArXive.org . . .
+</p>
+
+<p>
+It is easy to understand that the best protection is the <span class="term">STR</span>-strategy (<span class="term">specific typing rhythm</span>).
+You can verify this by following this link . . .
+but to use the STR-strategy, the user must adhere to a pre-memorized secret rhythm when typing the password, so now
+we are considering a more user-friendly strategy, when he does not need to remember the secret rhythm,
+but type the password as he usually does in his <span class="term">natural typing rhythm (NTR)</span>.
+The program must learn to recognize this rhythm (something similar to the fist of a radio operator) 
+using relevant statistical data, but it is still necessary to distinguish this rhythm from the rhythm of the attacker, 
+who will type the password in a 'common' rhythm.
+Now in this version a simple check is used (more for demonstration purposes) in which the time of pressing each key should be within 
+the range from the minimum to the maximum of the corresponding values obtained from the statistical values 
+(which are established during the program's training phase):
+</p>
+<!--- 
+	All special characters must be replaced with their HTML equivalents. 
+	<  	&lt;
+	> 	&gt;
+	& 	&amp;
+	etc.
+--->
+<pre><code class="language-javascript">
+const algo_name = "min-max verification";  // Please provide the name of your algorithm
+
+function checker(stats, arr){
+	for(let j=0; j &lt; stats[0].length; j++){
+		const column = getColumn(stats, j);
+		if((arr[j] &lt;  Math.min(...column)) || (arr[j]  &gt;  Math.max(...column))){
+			return false;
+		}
+	}
+	return true;
+}
+</code></pre>
+</p>
+
+<p>
+With proper training (i.e., with sufficient statistical data), this method begins to yield good — though not perfect — results. 
+Most importantly, the method is quite robust against cracking:
+</p>
+
+<table>
+<tbody>	
+<tr>
+	<td>min-max verification</td>
+	<td><font color="green">●</font>&nbsp;<font color="red">●</font>&nbsp;<font color="red">●</font>&nbsp;<font color="red">●</font>&nbsp;<font color="red">●</font>&nbsp;<font color="red">●</font>&nbsp;<font color="red">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="red">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="red">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="red">●</font>&nbsp;</td>
+</tr>	        
+<tr>
+	<td>Hacker`s attempts</td>
+	<td><font color="red">●</font> <font color="red">●</font> <font color="red">●</font> <font color="red">●</font> <font color="red">●</font> <font color="red">●</font> <font color="red">●</font> <font color="red">●</font> <font color="red">●</font> <font color="red">●</font> <font color="red">●</font> <font color="red">●</font> <font color="red">●</font> <font color="red">●</font> <font color="red">●</font> </td>
+</tr>	    
+</tbody>
+</table>
+
+
+<p>The most interesting challenge for any researcher in this topic is to propose their own method for recognizing a user's 
+natural typing rhythm. But — and we must stress this again — it is crucial to distinguish the user's rhythm from that of an attacker, 
+who would likely type the password in some generic "common" rhythm.
+Anyone is welcome to fork this project and modify the 
+<code class="language-javascript">function checker(stats, arr)</code>
+recognition function for <span class="term">NTR</span>.
+
+If your function demonstrates statistically good results, the project author will, upon your request, 
+add a link to your proposed fork in the following table:
+</p>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>method</th>
+      <th>link</th>
+      <th>False Rejection Rate, FRR</th>
+      <th>False Acceptance Rate, FAR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[NTR] min-max verification</td>
+      <td>this page</td>
+      <td>62 %</td>
+      <td>0 %</td>
+    </tr>
+    <tr>
+      <td>[STR] conf. interval. ver.</td>
+      <td>link</td>
+      <td>10 %</td>
+      <td>80 %</td>
+    </tr>      
+  </tbody>
+</table>
+
+
+</div>
+<p style="margin-bottom: 100px;"></p>
+
+<script>
+
+
+
+document.addEventListener('DOMContentLoaded', footer);
+
+</script>
+
+
+</BODY>
+</HTML>

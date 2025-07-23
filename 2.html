@@ -1,0 +1,57 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plots</title>
+    <script src="functions.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="plotting_stats.js"></script>
+    <style>
+        canvas {
+            max-width: 1000px;
+            height: 600px;
+            margin: 20px auto;
+            display: block;
+        }
+	body {
+		counter-reset: h2counter 2 h3counter 1;
+	}
+	</style>
+</head>
+<BODY>
+
+
+<a href="index.html#s" class="back-to-home-link">
+    ← Return to main page
+</a>
+
+<div style="width: 80%; margin: 5% auto">
+ <h3>Reviewing the Collected Data</h3>
+
+
+<div style="width: 600px; height: 250px; display: flex; justify-content: center; align-items: center; margin: 50px auto;">
+        <canvas id="myChart"></canvas>
+</div>
+
+<div style="width: 600px; height: 250px; display: flex; justify-content: center; align-items: center; margin: 50px auto; flex-direction: column; font-size:10pt">
+    <div id="legend2" style="border:0px solid red; width: 68%; display: flex; justify-content: space-between; align-items: center; position: relative; top: 30px; z-index: 1;">
+        <div style="display: flex; align-items: center; margin-right: 10px;">
+            <div style="width: 40px; height: 14px; background-color: #CCC; margin-right: 5px;"></div>
+            <span>Confidence interval</span>
+        </div>
+        <div style="display: flex; align-items: center;">
+            <div style="width: 12px; height: 12px; background-color: green; margin-right: 5px;"></div>
+            <span>Average (ms)</span>
+        </div>
+    </div>
+    <canvas id="myChart2" style="width: 599px;"></canvas>
+</div>
+
+<center><button id="playButton">Play Sound Sequence</button>
+
+<script>const _0xfececb=_0x5b11;(function(_0x5ba8cb,_0x66b1e6){const _0x4a4187=_0x5b11,_0x5c3acf=_0x5ba8cb();while(!![]){try{const _0x485230=-parseInt(_0x4a4187(0x91))/0x1*(-parseInt(_0x4a4187(0xa6))/0x2)+parseInt(_0x4a4187(0xa8))/0x3*(-parseInt(_0x4a4187(0x9a))/0x4)+-parseInt(_0x4a4187(0x9f))/0x5+-parseInt(_0x4a4187(0x9d))/0x6*(parseInt(_0x4a4187(0x92))/0x7)+parseInt(_0x4a4187(0x99))/0x8+-parseInt(_0x4a4187(0xa4))/0x9*(-parseInt(_0x4a4187(0x96))/0xa)+parseInt(_0x4a4187(0xa7))/0xb;if(_0x485230===_0x66b1e6)break;else _0x5c3acf['push'](_0x5c3acf['shift']());}catch(_0x5ea2a5){_0x5c3acf['push'](_0x5c3acf['shift']());}}}(_0x1eeb,0x367eb));let pass,stats=[];const aver=[],low=[],upp=[];async function onPageReady(){const _0x37be26=_0x5b11;try{stats=await getDataCopy();if(!stats||stats['length']===0x0)return;for(let _0xabc628=0x0;_0xabc628<stats[0x0]['length'];_0xabc628++){const _0x37ca6e=[];for(let _0x5745b6=0x0;_0x5745b6<stats[_0x37be26(0x93)];_0x5745b6++){_0x37ca6e[_0x37be26(0x9b)](stats[_0x5745b6][_0xabc628]);}const _0x15bf51=WeightedAverage(_0x37ca6e),_0x57a6ce=Math[_0x37be26(0x9e)](Variation(_0x37ca6e));aver[_0x37be26(0x9b)](_0x15bf51),low['push'](_0x15bf51-0x3*_0x57a6ce),upp[_0x37be26(0x9b)](_0x15bf51+0x3*_0x57a6ce);}createChart(_0x37be26(0xa1),aver,'\x20Averaged\x20(ms)'),createChart2(_0x37be26(0xa0),low,upp,aver,'low','up',_0x37be26(0xa2));}catch(_0x271d52){console[_0x37be26(0x9c)](_0x271d52);}}document[_0xfececb(0x94)](_0xfececb(0xa9),onPageReady);const clickSound=new Audio('click.wav');function _0x1eeb(){const _0x5b7283=['click','40mYZgXI','forEach','currentTime','312104aAtghL','4zZgHgo','push','error','234vBdYAH','sqrt','1945320QcDFPk','myChart2','myChart','Averaged','play','453546vfyllE','playButton','770332CLtMMb','5130147omtRrV','670647KMMUvD','DOMContentLoaded','1ySFNbW','46004InDouR','length','addEventListener'];_0x1eeb=function(){return _0x5b7283;};return _0x1eeb();}function playClick(){const _0x218619=_0xfececb;clickSound[_0x218619(0x98)]=0x0,clickSound[_0x218619(0xa3)]();}function playSequence(){const _0x2169be=_0xfececb;let _0x26f130=0x0;aver['push'](0x0),aver[_0x2169be(0x97)]((_0x3c0881,_0x6cdb14)=>{setTimeout(()=>{playClick();},_0x26f130),_0x26f130+=_0x3c0881;});}function _0x5b11(_0xd393a3,_0x4ccdc2){const _0x1eeb53=_0x1eeb();return _0x5b11=function(_0x5b1134,_0x3d5084){_0x5b1134=_0x5b1134-0x91;let _0x327c29=_0x1eeb53[_0x5b1134];return _0x327c29;},_0x5b11(_0xd393a3,_0x4ccdc2);}document['getElementById'](_0xfececb(0xa5))[_0xfececb(0x94)](_0xfececb(0x95),playSequence),document[_0xfececb(0x94)]('DOMContentLoaded',footer);</script>
+
+</BODY>
+</HTML>

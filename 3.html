@@ -1,0 +1,59 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collecting experimental data</title>
+    <script src="functions.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="plotting_stats.js"></script>
+<style>
+	body {
+		counter-reset: h2counter 2 h3counter 2;
+	}
+	.centering{
+		width: 90%;
+		border: 1px solid #EEE;
+		border-radius: 5px;
+		margin: 5% auto;
+		padding: 20px; 
+		text-align: center;
+	}
+        canvas {
+            max-width: 1000px;
+            height: 600px;
+            margin: 20px auto;
+            display: block;
+        }
+</style>
+</head>
+<BODY>
+
+
+<a href="index.html#s" class="back-to-home-link">
+    ← Return to main page
+</a>
+
+<div style="width: 80%; margin: 5% auto">
+ <h3>Verification</h3>
+
+ <div id="div_pass" class="centering">
+	Please type in your password using your unique typing rhythm <br><br> <INPUT TYPE="text" autofocus style="display: inline; width: 50%" id="myPass" />&nbsp;&nbsp;
+	<input style="display: inline;" type="submit" value="OK" onclick="verification()" />
+ </div>
+
+ <div id="result_div" class="centering" style="display: none; font-size: 1.5rem">
+	<span id="result"></span><br><br>
+	<input id="restart" style="display: inline;" type="submit" value="restart" onclick="restart()" />
+ </div>
+
+</div>
+
+<script>
+const _0x41ceea=_0x5781;(function(_0x36f819,_0x1b6042){const _0x1753a5=_0x5781,_0x4fa46c=_0x36f819();while(!![]){try{const _0x1c31db=parseInt(_0x1753a5(0x1de))/0x1*(parseInt(_0x1753a5(0x1be))/0x2)+parseInt(_0x1753a5(0x1d9))/0x3+-parseInt(_0x1753a5(0x1d7))/0x4*(parseInt(_0x1753a5(0x1c8))/0x5)+parseInt(_0x1753a5(0x1d8))/0x6+parseInt(_0x1753a5(0x1cf))/0x7*(parseInt(_0x1753a5(0x1d2))/0x8)+-parseInt(_0x1753a5(0x1d5))/0x9+-parseInt(_0x1753a5(0x1bf))/0xa;if(_0x1c31db===_0x1b6042)break;else _0x4fa46c['push'](_0x4fa46c['shift']());}catch(_0x10d28b){_0x4fa46c['push'](_0x4fa46c['shift']());}}}(_0x50da,0x7b69d));let pass,stats=[];async function onPageReady(){const _0x2e4b26=_0x5781;try{const _0x3e326e=await dbReadyPromise;if(!_0x3e326e)throw new Error(_0x2e4b26(0x1ca));stats=await getDataCopy(),pass=await getConfig(_0x2e4b26(0x1d3));const _0x1a2b36=document[_0x2e4b26(0x1c1)](_0x2e4b26(0x1d0));_0x1a2b36[_0x2e4b26(0x1d4)](),document[_0x2e4b26(0x1ce)](_0x2e4b26(0x1c0),keydownHandler);}catch(_0x51fd0b){console[_0x2e4b26(0x1cb)](_0x51fd0b);}}document[_0x41ceea(0x1ce)]('DOMContentLoaded',onPageReady);let Listener='',arr=[],t=performance[_0x41ceea(0x1dc)]();const pass_div=document[_0x41ceea(0x1c1)](_0x41ceea(0x1d0));async function restart(){const _0x1a6dc0=_0x41ceea;location[_0x1a6dc0(0x1dd)]();}async function keydownHandler(_0x5f4e42){const _0x2dff19=_0x41ceea;if(!(document[_0x2dff19(0x1c9)]===pass_div))return;if(_0x5f4e42['key']===_0x2dff19(0x1c5)){verification(),setTimeout(function(){const _0x17be8b=_0x2dff19,_0x33d0f8=document[_0x17be8b(0x1c1)]('restart');_0x33d0f8&&_0x33d0f8[_0x17be8b(0x1d4)]();},0x0);return;}Listener+=_0x5f4e42[_0x2dff19(0x1c4)];if(arr[_0x2dff19(0x1db)])arr[_0x2dff19(0x1e1)](parseFloat((performance[_0x2dff19(0x1dc)]()-t)[_0x2dff19(0x1c2)](0x2)));else arr[_0x2dff19(0x1e1)](0x0);t=performance['now']();}function verification(){const _0x2b7706=_0x41ceea;document[_0x2b7706(0x1c1)](_0x2b7706(0x1c6))[_0x2b7706(0x1c3)][_0x2b7706(0x1d1)]('inactive-section'),arr[_0x2b7706(0x1df)](),document[_0x2b7706(0x1c1)](_0x2b7706(0x1cc))['style'][_0x2b7706(0x1d6)]='';const _0x36dd2f=document['getElementById'](_0x2b7706(0x1e0));if(Listener==pass){_0x36dd2f[_0x2b7706(0x1bd)]='<FONT\x20color=green>Password\x20is\x20correct.</FONT>';let _0x5de7c5=checker(stats,arr);_0x5de7c5?_0x36dd2f['innerHTML']+='\x20<FONT\x20color=green>The\x20typing\x20rhythm\x20is\x20acceptable.</FONT>':_0x36dd2f[_0x2b7706(0x1bd)]+=_0x2b7706(0x1c7);}else _0x36dd2f['innerHTML']=_0x2b7706(0x1da);}document[_0x41ceea(0x1ce)](_0x41ceea(0x1cd),footer);function _0x5781(_0x78391e,_0x153d9e){const _0x50da11=_0x50da();return _0x5781=function(_0x5781bb,_0x31b360){_0x5781bb=_0x5781bb-0x1bd;let _0x47dad6=_0x50da11[_0x5781bb];return _0x47dad6;},_0x5781(_0x78391e,_0x153d9e);}function _0x50da(){const _0x5b0cec=['result_div','DOMContentLoaded','addEventListener','7nUnbrQ','myPass','add','1423264yVrUSc','password','focus','3713823AkDNxV','display','1204xmvWIJ','4110456BeijAF','1019400DzqrDR','<FONT\x20color=red>Password\x20is\x20INCORRECT.</FONT>','length','now','reload','7njYaKS','shift','result','push','innerHTML','186434LujJUO','8405340elkZuN','keydown','getElementById','toFixed','classList','key','Enter','div_pass','\x20<FONT\x20color=red>The\x20typing\x20rhythm\x20is\x20INCORRECT.</FONT>','1605iDHaKj','activeElement','База\x20даних\x20недоступна.\x20Роботу\x20припинено.','error'];_0x50da=function(){return _0x5b0cec;};return _0x50da();}
+</script>
+
+
+
+</BODY>
+</HTML>

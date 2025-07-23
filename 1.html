@@ -1,0 +1,79 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collecting experimental data</title>
+    <script src="functions.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+<style>
+	body {
+		counter-reset: h2counter 2 h3counter;
+	}
+	.centering{
+		width: 90%;
+		border: 1px solid #EEE;
+		border-radius: 5px;
+		margin: 1% auto;
+		padding: 10px; 
+		text-align: center;
+	}
+	.info-container {
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+	.info {
+		width: 10%; 
+		height: 50pt; 
+		margin: 0; 
+		background: #DDD; 
+		border-radius: 10pt; 
+		font-size: 20pt; 
+		text-align: center;		
+		align-items: center; 
+		justify-content: center; 
+		display: flex;
+	}
+</style>
+</head>
+<BODY>
+
+
+<a href="index.html#s" class="back-to-home-link">
+    ← Return to main page
+</a>
+
+<div style="width: 80%; margin: 5% auto">
+ <h3>Collecting experimental data</h3>
+
+ <div id="div_pass" class="centering inactive-section">
+	Set your desired password in this field &nbsp; <INPUT TYPE="text" style="display: inline; width: 40%" id="myPass" placeholder="at least 3 chars"/>&nbsp;&nbsp;
+	<input style="display: inline;" type="submit" value="OK" onclick="start()" />
+ </div>
+
+ <div id="div_typing" class="centering" style="display: none;">
+	<p style="text-align: center" align="center">
+        Simply start typing your password on the keyboard. You can do this multiple times.<br>
+	Pauses between words do not matter, but maintain a consistent typing pattern for each word.
+	</p>
+	<div class="info-container">
+		<div id="info"    class="info" style="width: 60%"></div>
+		<div id="counter" class="info" style="width: 50pt"></div>
+	</div>
+
+	<div id="myTable"></div>
+	
+ </div>
+
+</div>
+
+<script>
+const _0x4b087f=_0x3fa1;(function(_0x471ab9,_0x361004){const _0x47bbf3=_0x3fa1,_0x221037=_0x471ab9();while(!![]){try{const _0x40c79e=-parseInt(_0x47bbf3(0x1f8))/0x1+parseInt(_0x47bbf3(0x1dc))/0x2*(parseInt(_0x47bbf3(0x1d5))/0x3)+-parseInt(_0x47bbf3(0x1dd))/0x4+-parseInt(_0x47bbf3(0x1c7))/0x5*(parseInt(_0x47bbf3(0x1c9))/0x6)+-parseInt(_0x47bbf3(0x1f5))/0x7*(-parseInt(_0x47bbf3(0x1cd))/0x8)+-parseInt(_0x47bbf3(0x1c4))/0x9+-parseInt(_0x47bbf3(0x1d8))/0xa*(-parseInt(_0x47bbf3(0x1ea))/0xb);if(_0x40c79e===_0x361004)break;else _0x221037['push'](_0x221037['shift']());}catch(_0x4aea36){_0x221037['push'](_0x221037['shift']());}}}(_0x1cd6,0x83062));async function tableBuilding(_0x281fac){const _0x423645=_0x3fa1,_0x43ebaf=await getDataCopy();await reCalcIndicators_hacker(_0x43ebaf);const _0x2747a1=document[_0x423645(0x1d2)](_0x423645(0x1f3));let _0x493e06=_0x423645(0x1fc);const _0x59db6b=_0x423645(0x1d0),_0x586bcf=_0x423645(0x1ef);for(let _0x4560e8=0x0;_0x4560e8<0x1;_0x4560e8++){const _0x2ccab9=_0x281fac[_0x4560e8];let _0xc55a8='';for(let _0x3a86fa=0x0;_0x3a86fa<_0x2ccab9[_0x423645(0x1cf)];_0x3a86fa++){_0xc55a8+=_0x2ccab9[_0x3a86fa]?_0x59db6b:_0x586bcf;}_0x493e06+=_0x423645(0x1e6)+algo_name+_0x423645(0x1d7)+_0xc55a8+_0x423645(0x1e1),_0xc55a8='';}let _0x5a612f='';for(let _0x24692d=0x0;_0x24692d<indicators_of_hacker[_0x423645(0x1cf)];_0x24692d++){_0x5a612f+=indicators_of_hacker[_0x24692d]?_0x423645(0x1f1):'<FONT\x20color=red>●</FONT>\x20';}_0x493e06+=_0x423645(0x1f7)+_0x5a612f+_0x423645(0x1c3),_0x493e06+=_0x423645(0x1cb),_0x2747a1[_0x423645(0x1fb)]=_0x493e06;}let indicators_of_hacker=[![]];async function reCalcIndicators_hacker(_0x4302d9){const _0xad18db=_0x3fa1;let _0x11196e=0x0;for(let _0x46333f=0x0;_0x46333f<_0x4302d9['length'];_0x46333f++)_0x11196e+=sum_of_array(_0x4302d9[_0x46333f]);const _0x1a4dec=_0x11196e/(_0x4302d9[_0xad18db(0x1cf)]*_0x4302d9[0x0][_0xad18db(0x1cf)]),_0x45c530=new Array(_0x4302d9[0x0][_0xad18db(0x1cf)])[_0xad18db(0x1da)](_0x1a4dec);indicators_of_hacker=[![]];for(let _0x1c7528=0x1;_0x1c7528<_0x4302d9[_0xad18db(0x1cf)];_0x1c7528++){indicators_of_hacker[_0xad18db(0x1ce)](checker(_0x4302d9[_0xad18db(0x1c8)](0x0,_0x1c7528),_0x45c530));}}function _0x1cd6(){const _0x32dbb8=['blur','FATA\x20ERROR!','200555UrqcXx','slice','156aqZwxz','password','\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tbody>\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20</table>\x0a\x09\x20\x20\x20\x20','now','2216eYuXAu','push','length','<FONT\x20color=green>&#9679;</FONT>&nbsp;','div_pass','getElementById','error','code','334590kXZwtp','remove','</td>\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','13466990lrUMiz','counter','fill','style','6VhkmrR','2548072cLgDIO','block','tabIndex','myPass','</td>\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20','key','value','indicators','myStatistics','\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','display','addEventListener','classList','22HSnYVC','startsWith','info','div_typing','reload','<FONT\x20color=red>&#9679;</FONT>&nbsp;','removeAttribute','<FONT\x20color=green>●</FONT>\x20','DOMContentLoaded','myTable','ctrlKey','17318UyqzPK','keydown','\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>Hacker`s\x20attempts</td>\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','472626JJyZCq','start\x20over\x20please','At\x20least\x203\x20symbols!','innerHTML','\x0a\x09\x20\x20\x20\x20<br><br><table>\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20<tbody>\x0a\x09','metaKey','</td>\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x09\x20\x20\x20\x20','9216738gnpZil'];_0x1cd6=function(){return _0x32dbb8;};return _0x1cd6();}async function reCalcIndicators(){const _0x19d86b=_0x3fa1,_0x186ee3=await getDataCopy();await clearArray(_0x19d86b(0x1e5),_0x19d86b(0x1e4)),ind=[];let _0x37cfbe;for(let _0x5d5063=0x0;_0x5d5063<0x1;_0x5d5063++){_0x37cfbe=[!![]];for(let _0x2ba06d=0x1;_0x2ba06d<_0x186ee3[_0x19d86b(0x1cf)];_0x2ba06d++){_0x37cfbe[_0x19d86b(0x1ce)](checker(_0x186ee3['slice'](0x0,_0x2ba06d),_0x186ee3[_0x2ba06d]));}ind[_0x19d86b(0x1ce)](_0x37cfbe),await addData(_0x37cfbe,_0x19d86b(0x1e4));}}let pass;async function onPageReady(){const _0x521098=_0x3fa1;try{const _0x5c33f9=await dbReadyPromise;if(!_0x5c33f9){console['error'](_0x521098(0x1c6));return;}const _0x30af9e=await checkPassword();if(_0x30af9e){document[_0x521098(0x1d2)](_0x521098(0x1ed))[_0x521098(0x1db)][_0x521098(0x1e7)]=_0x521098(0x1de),pass=await getConfig('password'),document[_0x521098(0x1d2)](_0x521098(0x1e0))[_0x521098(0x1e3)]=pass,counter=await obtainCounter()||0x0,counter_div['innerHTML']=counter;var _0x2d24ea=await getDataCopy('myStatistics',_0x521098(0x1e4));const _0xcbd5a4=await getDataCopy(),_0x452236=_0xcbd5a4[_0x521098(0x1cf)]>0x0&&(_0x2d24ea[_0x521098(0x1cf)]===0x0||_0xcbd5a4[_0x521098(0x1cf)]!==_0x2d24ea[0x0][_0x521098(0x1cf)]);_0x452236&&(await reCalcIndicators(),_0x2d24ea=await getDataCopy(_0x521098(0x1e5),_0x521098(0x1e4)));counter>0x0&&await tableBuilding(_0x2d24ea);document[_0x521098(0x1e8)](_0x521098(0x1f6),keydownHandler);const _0x506c38=document[_0x521098(0x1d2)](_0x521098(0x1e0));_0x506c38[_0x521098(0x1c5)](),_0x506c38[_0x521098(0x1f0)]('autofocus'),_0x506c38[_0x521098(0x1df)]=-0x1;}else document['getElementById'](_0x521098(0x1d1))[_0x521098(0x1e9)][_0x521098(0x1d6)]('inactive-section'),document['getElementById']('myPass')['focus']();}catch(_0x3bcfa2){console['error'](_0x3bcfa2);}}document[_0x4b087f(0x1e8)](_0x4b087f(0x1f2),onPageReady);async function start(){const _0x21d645=_0x4b087f,_0x5ddab6=document[_0x21d645(0x1d2)](_0x21d645(0x1e0))['value'];if(_0x5ddab6&&_0x5ddab6['length']>0x2)try{await saveConfig(_0x21d645(0x1ca),_0x5ddab6),location[_0x21d645(0x1ee)]();}catch(_0x4ececf){console[_0x21d645(0x1d3)](_0x4ececf);;}else alert(_0x21d645(0x1fa));}let counter,Listener='',arr=[],t=performance['now']();const info_div=document[_0x4b087f(0x1d2)](_0x4b087f(0x1ec)),counter_div=document[_0x4b087f(0x1d2)](_0x4b087f(0x1d9));async function restart(){Listener='',arr=[],t=performance['now']();}function _0x3fa1(_0x50b0c8,_0x1723d4){const _0x1cd66c=_0x1cd6();return _0x3fa1=function(_0x3fa171,_0x6ae4fc){_0x3fa171=_0x3fa171-0x1c3;let _0x166ffa=_0x1cd66c[_0x3fa171];return _0x166ffa;},_0x3fa1(_0x50b0c8,_0x1723d4);}async function keydownHandler(_0x38d9c5){const _0xd23e9=_0x4b087f;if(_0x38d9c5[_0xd23e9(0x1d4)]=='KeyZ'&&(_0x38d9c5[_0xd23e9(0x1f4)]||_0x38d9c5[_0xd23e9(0x1fd)])||Listener['length']>0xf)_0x38d9c5['preventDefault'](),await restart(),info_div[_0xd23e9(0x1fb)]=_0xd23e9(0x1f9);else{Listener+=_0x38d9c5[_0xd23e9(0x1e2)],info_div[_0xd23e9(0x1fb)]=Listener;if(arr[_0xd23e9(0x1cf)])arr['push'](parseFloat((performance[_0xd23e9(0x1cc)]()-t)['toFixed'](0x2)));else arr[_0xd23e9(0x1ce)](0x0);t=performance['now']();}!pass[_0xd23e9(0x1eb)](Listener)&&(info_div['innerHTML']='You\x20made\x20a\x20typo.<br>\x20Start\x20over\x20please',await restart()),Listener==pass&&(counter+=0x1,await addData(arr[_0xd23e9(0x1c8)](0x1)),await restart(),counter_div['innerHTML']=counter,await reCalcIndicators(),ind=await getDataCopy(_0xd23e9(0x1e5),_0xd23e9(0x1e4)),await tableBuilding(ind));}document[_0x4b087f(0x1e8)](_0x4b087f(0x1f2),footer);
+</script>
+
+
+</BODY>
+</HTML>

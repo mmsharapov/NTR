@@ -18,5 +18,8 @@ Thumbs.db
 # Лог-файли
 *.log
 
-# txt-файли
+# інше
 *.txt
+*.zip
+*.rar
+

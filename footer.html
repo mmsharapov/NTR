@@ -38,26 +38,15 @@
 </style>
 
 <script type="text/javascript">
-      // Створюємо слухача події DOMContentLoaded
-      document.addEventListener('DOMContentLoaded', function() {
-        // Код всередині цієї функції виконається ТІЛЬКИ ПІСЛЯ того,
-        // як вся сторінка буде готова.
-
-        // Тепер тут можна безпечно ініціалізувати віджет
-        new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-        }, 'google_translate_element');
-      });
-
-      // Функція ініціалізації залишається глобальною, щоб callback міг її знайти
-      function googleTranslateElementInit() {
-        // Ця функція викликається, коли скрипт Google завантажиться.
-        // Вона більше не ініціалізує віджет напряму, 
-        // оскільки це тепер робиться всередині DOMContentLoaded.
-        // Але її можна залишити порожньою або для іншої логіки.
-        // ВАЖЛИВО: Назва функції має збігатися з cb=...
-      }
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+          pageLanguage: 'en', // Мова вашого сайту
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
 
     </script>
- <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script defer type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</head>

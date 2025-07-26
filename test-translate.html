@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Тест Google Translate</title>
+    
+    <!-- Стилі для налагодження і приховування банера -->
+    <style>
+      /* Приховуємо банер Google вгорі сторінки */
+      .goog-te-banner-frame.skiptranslate {
+          display: none !important;
+      }
+      body {
+          top: 0px !important;
+      }
+
+      /* Робимо сам віджет гарантовано видимим */
+      #google_translate_element {
+          border: 2px solid red;
+          min-width: 150px;
+          min-height: 25px;
+      }
+      #google_translate_element iframe {
+          border: 2px solid blue;
+      }
+    </style>
+</head>
+<body>
+
+    <h1>Сторінка для тестування перекладача</h1>
+    <p>Якщо ви бачите віджет перекладу нижче, значить, скрипти працюють правильно.</p>
+
+    <hr>
+
+    <!-- Елемент, де має з'явитися віджет -->
+    <div id="google_translate_element"></div>
+
+    <hr>
+
+
+    <!-- ======================================================= -->
+    <!--  СКРИПТИ РОЗМІЩЕНО В КІНЦІ BODY ДЛЯ НАДІЙНОСТІ -->
+    <!-- ======================================================= -->
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+          pageLanguage: 'uk', // Мова вашого сайту
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

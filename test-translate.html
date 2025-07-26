@@ -23,6 +23,14 @@
       #google_translate_element iframe {
           border: 2px solid blue;
       }
+      /* Додайте це правило, можливо, після правила для .footer-container */
+
+      @media (max-width: 768px) {
+        #google_translate_element {
+            width: 100%; /* Змушуємо віджет зайняти всю доступну ширину колонки */
+            margin-top: 15px; /* Можна додати відступ зверху для краси */
+        }
+      }
     </style>
 </head>
 <body>

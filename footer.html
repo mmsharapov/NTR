@@ -19,42 +19,43 @@
 
 
 <style>
-	.goog-te-banner-frame.skiptranslate {    display: none !important;  }
-/* --- CSS для налагодження Google Translate --- */
+/* === Фінальні стилі для Google Translate === */
 
-/* Дамо червону рамку нашому контейнеру, щоб бачити його межі */
-#google_translate_element {
-    border: 2px solid red;
-    min-height: 20px; /* Примусово дамо йому висоту */
+/* 1. Приховуємо банер Google вгорі сторінки */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+body {
+    top: 0px !important;
 }
 
-/* Націлимося на iframe, який Google створює всередині */
+/* 2. Гарантуємо, що сам віджет має розмір і видимий */
+#google_translate_element {
+    /* Примусово даємо ширину, щоб скрипт міг вставити віджет */
+    width: 100%;
+    max-width: 200px; /* Обмежимо максимальну ширину для краси */
+    
+    /* Додамо трохи простору, щоб він не прилипав до інших елементів */
+    margin: 0 auto; /* Центруємо у flex-колонці */
+}
+
+/* 3. Гарантуємо видимість iframe, який створює Google */
 #google_translate_element iframe {
     display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    border: 2px solid blue; /* Дамо синю рамку самому віджету */
-}    
-/* Додайте це правило, можливо, після правила для .footer-container */
-
-@media (max-width: 768px) {
-  #google_translate_element {
-    width: 100%; /* Змушуємо віджет зайняти всю доступну ширину колонки */
-    margin-top: 15px; /* Можна додати відступ зверху для краси */
-  }
+    width: 100% !important;
 }
 </style>
 
 <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
-          pageLanguage: 'en', // Мова вашого сайту
+          pageLanguage: 'uk', // Мова вашого сайту
           layout: google.translate.TranslateElement.InlineLayout.SIMPLE
       }, 'google_translate_element');
     }
-  </script>
+</script>
 
-    </script>
-    <script defer type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!-- Потім завантажуємо зовнішній скрипт з атрибутом defer -->
+<script defer type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </head>

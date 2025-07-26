@@ -16,17 +16,7 @@ body {
     margin: 0;
     font-size: 1rem;
     padding: 2rem;
-<<<<<<< HEAD
-    /*cursor: default; */
-    /*
-    user-select: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-    */
-=======
     cursor: default;
->>>>>>> 4dda4ec0db87729ea1ca11ba4d3245c9d11fb628
 }
 h2::before {
     counter-increment: h2counter;

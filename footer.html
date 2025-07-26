@@ -54,16 +54,23 @@ body {
 }
 </style>
 
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-          pageLanguage: 'uk', // Мова вашого сайту
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
-    }
-</script>
 
-<!-- Потім завантажуємо зовнішній скрипт з атрибутом defer -->
-<script defer type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- ========================================================== -->
+    <!--     ФІНАЛЬНА ВЕРСІЯ СКРИПТІВ GOOGLE TRANSLATE          -->
+    <!-- ========================================================== -->
 
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          // Цей рядок допоможе нам побачити, чи викликається функція
+          console.log('Ініціалізація Google Translate викликана!');
+    
+          new google.translate.TranslateElement({
+              pageLanguage: 'en', // Мова вашого сайту
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
+        }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        
 </head>

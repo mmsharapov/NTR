@@ -20,13 +20,28 @@
 
 <style>
 	.goog-te-banner-frame.skiptranslate {    display: none !important;  }
+/* --- CSS для налагодження Google Translate --- */
+
+/* Дамо червону рамку нашому контейнеру, щоб бачити його межі */
+#google_translate_element {
+    border: 2px solid red;
+    min-height: 20px; /* Примусово дамо йому висоту */
+}
+
+/* Націлимося на iframe, який Google створює всередині */
+#google_translate_element iframe {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    border: 2px solid blue; /* Дамо синю рамку самому віджету */
+}    
 </style>
 
 <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement(
         {
-          pageLanguage: 'en',
+          pageLanguage: 'uk',
           layout: google.translate.TranslateElement.InlineLayout.SIMPLE 
         }, 
         'google_translate_element'

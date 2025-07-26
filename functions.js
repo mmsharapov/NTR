@@ -39,6 +39,9 @@ function getColumn(S, k) {
   return column;
 }
 
+
+/*  CHANGE IT IN THE FORK */
+
 const algo_name = "min-max verification";  // Please provide the name of your algorithm
 
 function checker(stats, arr){

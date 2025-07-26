@@ -6,8 +6,6 @@
 
 
 
-	<div id="google_translate_element"></div>
-
         <div class="footer-links">
             <a href="index.html">Home</a>
             <a href="repository.html">Project Repository</a>
@@ -16,61 +14,3 @@
     </div>
 </footer>
 
-
-
-<style>
-/* === ФІНАЛЬНИЙ ТА ПОВНИЙ СТИЛЬ ДЛЯ GOOGLE TRANSLATE === */
-
-/* 1. Приховуємо банер Google, який з'являється вгорі сторінки */
-.goog-te-banner-frame.skiptranslate {
-    display: none !important;
-}
-body {
-    top: 0px !important;
-}
-
-/* 2. Гарантуємо, що контейнер віджета має реальні розміри */
-#google_translate_element {
-    /* Даємо ширину, щоб контейнер не був нульовим */
-    width: 100%;
-    max-width: 220px; /* Трохи збільшимо для комфорту */
-
-    /* ВАЖЛИВО: Даємо висоту, щоб контейнер не "схлопувався" */
-    min-height: 30px; 
-    
-    /* Центруємо контейнер у футері */
-    margin: 0 auto;
-
-    /* Використовуємо flex, щоб віджет всередині був вирівняний по центру */
-    display: flex;
-    align-items: center;
-}
-
-/* 3. Гарантуємо, що сам віджет (iframe) заповнює наш контейнер */
-#google_translate_element iframe {
-    width: 100% !important;
-    height: 100% !important;
-    border: none; /* Прибираємо стандартну рамку iframe */
-}
-</style>
-
-
-    <!-- ========================================================== -->
-    <!--     ФІНАЛЬНА ВЕРСІЯ СКРИПТІВ GOOGLE TRANSLATE          -->
-    <!-- ========================================================== -->
-
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-          // Цей рядок допоможе нам побачити, чи викликається функція
-          console.log('Ініціалізація Google Translate викликана!');
-    
-          new google.translate.TranslateElement({
-              pageLanguage: 'en', // Мова вашого сайту
-              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-          }, 'google_translate_element');
-        }
-    </script>
-    <script defer type="text/javascript" src="//translate.google.com/translate_a/element.js"></script>
-
-        
-</head>
